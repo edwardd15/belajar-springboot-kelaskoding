@@ -43,9 +43,9 @@ public class ProductService {
         productRepo.deleteById(id);
     }
 
-    public List<Product> findByName(String name){
-        return productRepo.findByNameContains(name);
-    }
+    // public List<Product> findByName(String name){
+    //     return productRepo.findByNameContains(name);
+    // }
 
     public void addSupplier(Supplier supplier, Long productId){
         Product product = findOne(productId);
