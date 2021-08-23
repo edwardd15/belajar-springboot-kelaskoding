@@ -50,6 +50,7 @@ public class CategoryController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseData);
         }
         Category category = modelMapper.map(categoryData, Category.class);
+        // Category category = Category.builder().id(1).name("what ever") //Cara pakai builder
         responseData.setStatus(true);
         responseData.setPayload(categoryService.save(category));
         return ResponseEntity.ok(responseData);
